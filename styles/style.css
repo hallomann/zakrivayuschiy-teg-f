@@ -19,7 +19,7 @@
   display: grid;
   justify-content: center;
   font-family: var(--main-font);
-  font-weight: var(--main-font-weight);
+  font-variation-settings: "wght" var(--main-font-weight);
   color: var(--text-color);
   background-color: var(--background-color);
   background-image: var(--background-image);
@@ -42,10 +42,14 @@
 .header__logo {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  line-height: 70px;
+  letter-spacing: 2px;
 }
 
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 105%;
+  letter-spacing: 1px;
 }
 
 .header__theme-menu {
@@ -68,6 +72,8 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  line-height: 105%;
+  appearance: none;
 }
 
 .theme-menu__button:disabled {
@@ -101,13 +107,13 @@
   transform: scaleX(1);
 }
 
-.theme-menu__button:hover,
-.theme-menu__button:focus {
+.theme-menu__button:hover {
   opacity: 0.6;
 }
 
 .theme-menu__button:focus {
   outline: none;
+  opacity: 0.6;
 }
 
 .main {
@@ -116,7 +122,12 @@
   gap: 50px;
 }
 
-.card,
+.card {
+  background: var(--background-color);
+  border: 2px solid var(--text-color);
+  max-inline-size: 700px;
+}
+
 .container {
   background: var(--background-color);
   border: 2px solid var(--text-color);
@@ -131,6 +142,7 @@
 .card__title {
   font-size: 18px;
   font-variation-settings: "wght" var(--title-font-weight);
+  line-height: 110%;
 }
 
 .card__img-container {
@@ -149,11 +161,13 @@
   mix-blend-mode: hard-light;
   text-shadow: 0 0 1px var(--background-color);
   z-index: 1;
+  line-height: 125%;
 }
 
 .card__img {
   display: block;
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
@@ -177,11 +191,12 @@
 .card__icon-button {
   display: block;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 0;
   cursor: pointer;
   transition: border-color 0.3s ease;
   padding-top: 3px;
+  appearance: none;
 }
 
 .card__icon-button:focus {
@@ -201,6 +216,8 @@
   cursor: pointer;
   transition: box-shadow 0.3s ease;
   padding: 10px 34px;
+  line-height: 125%;
+  appearance: none;
 }
 
 .button:focus {
@@ -242,13 +259,14 @@
   padding: 15px 20px;
 }
 
-.button__text,
-.button__icon {
+.button__text {
   color: var(--button-text-color);
   mix-blend-mode: difference;
 }
 
 .button__icon {
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
   block-size: 21px;
   inline-size: 21px;
 }
@@ -264,9 +282,7 @@
   border: 2px solid var(--text-color);
   color: var(--text-color);
   font-family: var(--accent-font);
-  font-size: 14px;
   text-transform: uppercase;
-  line-height: 1.5;
   padding: 30px;
 }
 
@@ -277,8 +293,7 @@
 }
 
 .popup::backdrop {
-  background-color: #000;
-  opacity: 0.75;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .popup__content {
@@ -286,6 +301,9 @@
   grid-template-columns: 39px 1fr;
   align-items: center;
   gap: 20px;
+  font-weight: var(--main-font-weight);
+  font-size: 14px;
+  line-height: 150%;
 }
 
 .popup__icon {
@@ -333,7 +351,7 @@
 @media (width <= 375px) {
   .popup {
     max-inline-size: 340px;
-    padding: 28px 34px 28px 40px;
+    padding: 32px 42px 30px;
   }
 
   .card__img-label {
@@ -357,6 +375,7 @@
 ) {
   .card__img-label {
     text-shadow: none;
+    text-stroke: 1px var(--background-color);
     -webkit-text-stroke: 1px var(--background-color);
   }
 }

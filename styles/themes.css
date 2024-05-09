@@ -18,8 +18,8 @@
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 
-  --like-body-color: transparent;
-  --like-outline-color: var(--text-color);
+  --like-main-body-color: transparent;
+  --like-contour-color: var(--text-color);
   --like-sparks-color: #ff0000;
   --button-text-color: var(--background-color);
 }
@@ -38,8 +38,8 @@
     repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #007f0c 0.01%, #004306);
 
-  --like-body-color: #000;
-  --like-outline-color: var(--text-color);
+  --like-main-body-color: #000;
+  --like-contour-color: var(--text-color);
   --like-sparks-color: #ff0000;
   --button-text-color: #00cc14;
 }
@@ -59,8 +59,8 @@
       repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
       linear-gradient(to bottom, #007f0c 0.01%, #004306);
 
-    --like-body-color: transparent;
-    --like-outline-color: var(--text-color);
+    --like-main-body-color: transparent;
+    --like-contour-color: var(--text-color);
     --like-sparks-color: #ff0000;
     --button-text-color: #00cc14;
   }
