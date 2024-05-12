@@ -42,14 +42,13 @@
 .header__logo {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  line-height: 70px;
-  letter-spacing: 2px;
+  line-height: auto;
 }
 
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  line-height: 105%;
-  letter-spacing: 1px;
+  line-height: auto;
+  font-weight: 400;
 }
 
 .header__theme-menu {
@@ -72,7 +71,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: opacity 0.3s ease;
-  line-height: 105%;
+  line-height: auto;
   appearance: none;
 }
 
@@ -142,7 +141,7 @@
 .card__title {
   font-size: 18px;
   font-variation-settings: "wght" var(--title-font-weight);
-  line-height: 110%;
+  line-height: auto;
 }
 
 .card__img-container {
@@ -161,7 +160,7 @@
   mix-blend-mode: hard-light;
   text-shadow: 0 0 1px var(--background-color);
   z-index: 1;
-  line-height: 125%;
+  line-height: auto;
 }
 
 .card__img {
@@ -216,7 +215,7 @@
   cursor: pointer;
   transition: box-shadow 0.3s ease;
   padding: 10px 34px;
-  line-height: 125%;
+  line-height: auto;
   appearance: none;
 }
 
@@ -314,6 +313,11 @@
 .popup__button {
   text-transform: uppercase;
   inline-size: 100%;
+}
+
+.popup__text {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .multi-effect {
